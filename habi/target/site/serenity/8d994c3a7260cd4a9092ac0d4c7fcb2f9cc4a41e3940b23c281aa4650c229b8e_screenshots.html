@@ -1,0 +1,313 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="556df6d4bff0e7830e33dda8a08fa4584d12dc1f01ab27b730cdbd1a32b0464c.html">Login To The Phptravels Page</a></span>
+                > <span class="truncate-60"><a
+                    href="8d994c3a7260cd4a9092ac0d4c7fcb2f9cc4a41e3940b23c281aa4650c229b8e.html">Create categorie </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 11-08-2021 17:35</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Login To The Phptravels Page</span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                            <div class="requirementNarrative">Background: login to the phptravels page
+                                    <p></p>
+                            </div>
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="8e3b9bd5eba0a2d944ce7d2a73335e57289cd25f71e556e1618e946dc87d7ec9.html">Stories
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Create categorie
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given Select menu blog<br>When Select submenu blog categories<br>And Enter button add categorie<br>Then Enter the form data and add the category<br><table class='embedded'><thead><th>txtName</th><th>txtTurkish</th><th>txtArabic</th><th>txtGerman</th><th>txtVietnamese</th><th>txtSpanish</th><th>txtRussian</th><th>txtFarsi</th><th>txtFrench</th></thead><tbody><tr><td>&lt;txtName&gt;</td><td>&lt;txtTurkish&gt;</td><td>&lt;txtArabic&gt;</td><td>&lt;txtGerman&gt;</td><td>&lt;txtVietnamese&gt;</td><td>&lt;txtSpanish&gt;</td><td>&lt;txtRussian&gt;</td><td>&lt;txtFarsi&gt;</td><td>&lt;txtFrench&gt;</td></tr></tbody></table><br>And Validate categorie create<br><table class='embedded'><tbody><tr><td>strNameCategorie</td></tr><tr><td>&lt;strNameCategorie&gt;</td></tr></tbody></table></div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="c78c6c32737c96c320ccc52c26adc3fce8042687deedbc018265d03f1aebb33b.png" title=" Example: {txtName=Categorie 3, txtTurkish=2, txtArabic=3, txtGerman=4, txtVietnamese=5, txtSpanish=6, txtRussian=7, txtFarsi=8, txtFrench=9, strNameCategorie=Categorie 3}" width="1366"/>
+                <img src="c78c6c32737c96c320ccc52c26adc3fce8042687deedbc018265d03f1aebb33b.png" title=" Given on the home page Phptravels" width="1366"/>
+                <img src="c78c6c32737c96c320ccc52c26adc3fce8042687deedbc018265d03f1aebb33b.png" title=" Andres open browser" width="1366"/>
+                <img src="c78c6c32737c96c320ccc52c26adc3fce8042687deedbc018265d03f1aebb33b.png" title=" Andres opens the Phptravels page" width="1366"/>
+                <img src="c78c6c32737c96c320ccc52c26adc3fce8042687deedbc018265d03f1aebb33b.png" title=" Andres open browser (completed)" width="1366"/>
+                <img src="c78c6c32737c96c320ccc52c26adc3fce8042687deedbc018265d03f1aebb33b.png" title=" Given on the home page Phptravels (completed)" width="1366"/>
+                <img src="c78c6c32737c96c320ccc52c26adc3fce8042687deedbc018265d03f1aebb33b.png" title=" When enter my credentials
+| strEmail | strPassword |
+| admin@phptravels.com | demoadmin |" width="1366"/>
+                <img src="c78c6c32737c96c320ccc52c26adc3fce8042687deedbc018265d03f1aebb33b.png" title=" Andres open browser" width="1366"/>
+                <img src="c78c6c32737c96c320ccc52c26adc3fce8042687deedbc018265d03f1aebb33b.png" title=" Andres opens the Phptravels page" width="1366"/>
+                <img src="fa806cd0840923e445b4f0cd42ac4ee97c942b2365a949214440cbb73c91c9bd.png" title=" Andres opens the Phptravels page (completed)" width="1366"/>
+                <img src="fa806cd0840923e445b4f0cd42ac4ee97c942b2365a949214440cbb73c91c9bd.png" title=" Andres open browser (completed)" width="1366"/>
+                <img src="fa806cd0840923e445b4f0cd42ac4ee97c942b2365a949214440cbb73c91c9bd.png" title=" Andres login" width="1366"/>
+                <img src="fa806cd0840923e445b4f0cd42ac4ee97c942b2365a949214440cbb73c91c9bd.png" title=" Andres enters 'admin@phptravels.com' into Input email" width="1366"/>
+                <img src="c26349a913ec3ac9507639eb7dde73098c3cec817c174512eac73959aa218866.png" title=" Andres enters 'admin@phptravels.com' into Input email (completed)" width="1366"/>
+                <img src="c26349a913ec3ac9507639eb7dde73098c3cec817c174512eac73959aa218866.png" title=" Andres enters 'demoadmin' into Input password" width="1366"/>
+                <img src="67237de20bd5dd22392dcf1f51ca2b7645f28be1eaa18249e8cd745620b038ab.png" title=" Andres enters 'demoadmin' into Input password (completed)" width="1366"/>
+                <img src="67237de20bd5dd22392dcf1f51ca2b7645f28be1eaa18249e8cd745620b038ab.png" title=" Andres clicks on Enter button login" width="1366"/>
+                <img src="ffe353eacb41bdff0367a6fc253130b2f5552f57e44a792ca24310e53984a779.png" title=" Andres clicks on Enter button login (completed)" width="1366"/>
+                <img src="ffe353eacb41bdff0367a6fc253130b2f5552f57e44a792ca24310e53984a779.png" title=" Andres login (completed)" width="1366"/>
+                <img src="ffe353eacb41bdff0367a6fc253130b2f5552f57e44a792ca24310e53984a779.png" title=" When enter my credentials
+| strEmail | strPassword |
+| admin@phptravels.com | demoadmin | (completed)" width="1366"/>
+                <img src="ffe353eacb41bdff0367a6fc253130b2f5552f57e44a792ca24310e53984a779.png" title=" Given Select menu blog" width="1366"/>
+                <img src="ffe353eacb41bdff0367a6fc253130b2f5552f57e44a792ca24310e53984a779.png" title=" Andres select menu blog" width="1366"/>
+                <img src="dec97630b10e76086acf40a5eaa379f0ce409c1db472c590ddfdee1885baa4d7.png" title=" Andres clicks on Select button blog" width="1366"/>
+                <img src="58aea2bdc05bdf2bc0593784c21ee1c7c2c78186f386dede50fd059bfc8caaad.png" title=" Andres clicks on Select button blog (completed)" width="1366"/>
+                <img src="58aea2bdc05bdf2bc0593784c21ee1c7c2c78186f386dede50fd059bfc8caaad.png" title=" Andres select menu blog (completed)" width="1366"/>
+                <img src="58aea2bdc05bdf2bc0593784c21ee1c7c2c78186f386dede50fd059bfc8caaad.png" title=" Given Select menu blog (completed)" width="1366"/>
+                <img src="58aea2bdc05bdf2bc0593784c21ee1c7c2c78186f386dede50fd059bfc8caaad.png" title=" When Select submenu blog categories" width="1366"/>
+                <img src="58aea2bdc05bdf2bc0593784c21ee1c7c2c78186f386dede50fd059bfc8caaad.png" title=" Andres select sub menu blog cat" width="1366"/>
+                <img src="c4bd008d0ee0a3c7d9b6e08d2d0e5edfeddc4bf0b193f1463b2777244e6e2799.png" title=" Andres clicks on Select button blog categories" width="1366"/>
+                <img src="bc688dcd98ac439e9cb389718ef0e371e6d0881179a7409c482e76e82fe904b2.png" title=" Andres clicks on Select button blog categories (completed)" width="1366"/>
+                <img src="bc688dcd98ac439e9cb389718ef0e371e6d0881179a7409c482e76e82fe904b2.png" title=" Andres select sub menu blog cat (completed)" width="1366"/>
+                <img src="bc688dcd98ac439e9cb389718ef0e371e6d0881179a7409c482e76e82fe904b2.png" title=" When Select submenu blog categories (completed)" width="1366"/>
+                <img src="bc688dcd98ac439e9cb389718ef0e371e6d0881179a7409c482e76e82fe904b2.png" title=" And Enter button add categorie" width="1366"/>
+                <img src="bc688dcd98ac439e9cb389718ef0e371e6d0881179a7409c482e76e82fe904b2.png" title=" Andres enter button add categorie" width="1366"/>
+                <img src="5360003a91d5292d2dc96f056bb0a3d27d02d06d65eaeda7212f7950ae4ea58a.png" title=" Andres clicks on Select button add categorie" width="1366"/>
+                <img src="13cf8f35b73fcbd4efb718e55bd4ca93997ccfa902ff44d85a49a263c06be69b.png" title=" Andres clicks on Select button add categorie (completed)" width="1366"/>
+                <img src="13cf8f35b73fcbd4efb718e55bd4ca93997ccfa902ff44d85a49a263c06be69b.png" title=" Andres enter button add categorie (completed)" width="1366"/>
+                <img src="13cf8f35b73fcbd4efb718e55bd4ca93997ccfa902ff44d85a49a263c06be69b.png" title=" And Enter button add categorie (completed)" width="1366"/>
+                <img src="13cf8f35b73fcbd4efb718e55bd4ca93997ccfa902ff44d85a49a263c06be69b.png" title=" Then Enter the form data and add the category
+| txtName | txtTurkish | txtArabic | txtGerman | txtVietnamese | txtSpanish | txtRussian | txtFarsi | txtFrench |
+| Categorie 3 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |" width="1366"/>
+                <img src="13cf8f35b73fcbd4efb718e55bd4ca93997ccfa902ff44d85a49a263c06be69b.png" title=" Andres input form categorie" width="1366"/>
+                <img src="8251ec326c4d1df97213d24f351c4812949fd194e09daeaff3da0895f2d6adeb.png" title=" Andres enters 'Categorie 3' into Input name categorie" width="1366"/>
+                <img src="fe738576ae67ebe8524c06878e7c67563ab0422f530ab4b31747a70d272eff32.png" title=" Andres enters 'Categorie 3' into Input name categorie (completed)" width="1366"/>
+                <img src="fe738576ae67ebe8524c06878e7c67563ab0422f530ab4b31747a70d272eff32.png" title=" Andres enters '2' into Input name in Turkish" width="1366"/>
+                <img src="0519d77b99d24083b0b791f632a6ee829557d9974ed99a7d07ffe32227f3308a.png" title=" Andres enters '2' into Input name in Turkish (completed)" width="1366"/>
+                <img src="0519d77b99d24083b0b791f632a6ee829557d9974ed99a7d07ffe32227f3308a.png" title=" Andres enters '3' into Input name in Arabic" width="1366"/>
+                <img src="219957888aff42258838aa6f58c31c9026e7972b8768f6a32fb205237f4e7b81.png" title=" Andres enters '3' into Input name in Arabic (completed)" width="1366"/>
+                <img src="219957888aff42258838aa6f58c31c9026e7972b8768f6a32fb205237f4e7b81.png" title=" Andres enters '4' into Input name in German" width="1366"/>
+                <img src="ee1b3de15bb26e8a41dfda95d539dd683d5f7c3090f8fab4b5862681585f290d.png" title=" Andres enters '4' into Input name in German (completed)" width="1366"/>
+                <img src="ee1b3de15bb26e8a41dfda95d539dd683d5f7c3090f8fab4b5862681585f290d.png" title=" Andres enters '5' into Input name in Vietnamese" width="1366"/>
+                <img src="223b89c2b827b10710310f1014912cb94d57dd36b9e020423511d42687e5eedb.png" title=" Andres enters '5' into Input name in Vietnamese (completed)" width="1366"/>
+                <img src="223b89c2b827b10710310f1014912cb94d57dd36b9e020423511d42687e5eedb.png" title=" Andres enters '6' into Input name in Spanish" width="1366"/>
+                <img src="a0e72e2d389c241d75287768dca7e7bdd4a667d65658d89412ca5e315d7b08fc.png" title=" Andres enters '6' into Input name in Spanish (completed)" width="1366"/>
+                <img src="a0e72e2d389c241d75287768dca7e7bdd4a667d65658d89412ca5e315d7b08fc.png" title=" Andres enters '7' into Input name in Russian" width="1366"/>
+                <img src="bb2f208c73cc1231077996397670427a1740f30917f607a6f2102ba97208ec61.png" title=" Andres enters '7' into Input name in Russian (completed)" width="1366"/>
+                <img src="bb2f208c73cc1231077996397670427a1740f30917f607a6f2102ba97208ec61.png" title=" Andres enters '8' into Input name in Farsi" width="1366"/>
+                <img src="c7f3b6bbe6305b0c8fbc3847880761e22003039f6f81388a18f48db0c3b2fa3a.png" title=" Andres enters '8' into Input name in Farsi (completed)" width="1366"/>
+                <img src="c7f3b6bbe6305b0c8fbc3847880761e22003039f6f81388a18f48db0c3b2fa3a.png" title=" Andres enters '9' into Input name in French" width="1366"/>
+                <img src="3868e9026d952943a78da094eafedf20ccac20285bdd5940a2faa1793978a164.png" title=" Andres enters '9' into Input name in French (completed)" width="1366"/>
+                <img src="3868e9026d952943a78da094eafedf20ccac20285bdd5940a2faa1793978a164.png" title=" Andres clicks on Enter button add" width="1366"/>
+                <img src="d54bc25dd317a642426b559aae6d56ab5b3697abd020f72e53c1d2e3e459c3f4.png" title=" Andres clicks on Enter button add (completed)" width="1366"/>
+                <img src="d54bc25dd317a642426b559aae6d56ab5b3697abd020f72e53c1d2e3e459c3f4.png" title=" Andres input form categorie (completed)" width="1366"/>
+                <img src="d54bc25dd317a642426b559aae6d56ab5b3697abd020f72e53c1d2e3e459c3f4.png" title=" Then Enter the form data and add the category
+| txtName | txtTurkish | txtArabic | txtGerman | txtVietnamese | txtSpanish | txtRussian | txtFarsi | txtFrench |
+| Categorie 3 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | (completed)" width="1366"/>
+                <img src="d54bc25dd317a642426b559aae6d56ab5b3697abd020f72e53c1d2e3e459c3f4.png" title=" And Validate categorie create
+| strNameCategorie |
+| Categorie 3 |" width="1366"/>
+                <img src="d54bc25dd317a642426b559aae6d56ab5b3697abd020f72e53c1d2e3e459c3f4.png" title=" Then categorie create" width="1366"/>
+                <img src="d54bc25dd317a642426b559aae6d56ab5b3697abd020f72e53c1d2e3e459c3f4.png" title=" Then categorie create (completed)" width="1366"/>
+                <img src="d54bc25dd317a642426b559aae6d56ab5b3697abd020f72e53c1d2e3e459c3f4.png" title=" And Validate categorie create
+| strNameCategorie |
+| Categorie 3 | (completed)" width="1366"/>
+                <img src="d54bc25dd317a642426b559aae6d56ab5b3697abd020f72e53c1d2e3e459c3f4.png" title=" Example: {txtName=Categorie 3, txtTurkish=2, txtArabic=3, txtGerman=4, txtVietnamese=5, txtSpanish=6, txtRussian=7, txtFarsi=8, txtFrench=9, strNameCategorie=Categorie 3} (completed): <span class='success-color'>SUCCESS</span>" width="1366"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.1.10</span>
+</div>
+</body>
+</html>

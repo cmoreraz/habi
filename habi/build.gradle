@@ -1,0 +1,53 @@
+defaultTasks 'clean', 'test', 'aggregate'
+
+repositories {
+    mavenLocal()
+    jcenter()
+} 	
+
+buildscript {
+    repositories {
+    	mavenLocal()
+        jcenter()
+    }
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:2.4.34")     
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'java-library'
+apply plugin: 'eclipse'
+apply plugin: 'net.serenity-bdd.aggregator'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+  
+	implementation 'net.serenity-bdd:serenity-junit:2.1.10'
+    implementation 'net.serenity-bdd:serenity-core:2.1.10'
+    implementation 'net.serenity-bdd:serenity-cucumber:1.9.51'
+    implementation 'org.slf4j:slf4j-simple:2.0.0-alpha2'
+    implementation 'com.google.guava:guava:23.0'    
+    implementation 'org.apache.poi:poi-ooxml:4.1.2'    
+    implementation 'org.apache.logging.log4j:log4j-api:2.6.1'
+    implementation 'org.apache.logging.log4j:log4j-core:2.6.1'
+    implementation 'com.jcraft:jsch:0.1.54'
+    implementation 'org.postgresql:postgresql:42.2.14'
+    
+    implementation group: 'log4j', name: 'log4j', version: '1.2.17'              
+   
+}
+
+test {
+    testLogging.showStandardStreams = true
+    systemProperties System.getProperties()
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+gradle.startParameter.continueOnFailure = true
+
